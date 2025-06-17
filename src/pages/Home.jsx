@@ -1,9 +1,15 @@
-
+import { SectionFour } from "../components/SectionFour";
+import { SectionThree } from "../components/SectionThree";
+import { SectionTwo } from "../components/SectionTwo";
+import { Slider } from "../components/Slider";
 
 export const Home = () => {
   return (
     <>
-   <h1>home</h1>
+      <Slider />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
     </>
-  )
-}
+  );
+};
