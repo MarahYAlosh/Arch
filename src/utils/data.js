@@ -1,6 +1,7 @@
 import sliderImage from "../assets/images/slider.jpg";
 import serviceImage from "../assets/images/pic1.png";
 import serviceImage2 from "../assets/images/pic2.png";
+import projectImage from "../assets/images/proj.jpg";
 
 export const pagesHeader = [
   { name: "الرئيسية", path: "/" },
@@ -51,18 +52,53 @@ export const projects = [
     id: 1,
     title: "مشروع 1",
     description: "قم بترقية مساحاتك",
-    image: "",
+    image:projectImage,
   },
   {
     id: 2,
     title: "مشروع 2",
     description: "قم بترقية مساحاتك",
-    image: "",
+    image: projectImage,
   },
   {
     id: 3,
     title: "مشروع 3",
     description: "قم بترقية مساحاتك",
-    image: "",
+    image: projectImage,
   },
 ];
+
+
+export const properties = [
+  {
+    id: 1,
+    image: sliderImage,
+    title: "شقة سكايب بول",
+    location: "1020 شارع بلومينجديل",
+    price: 280000,
+    beds: 4,
+    baths: 2,
+    area: 450,
+  },
+  {
+    id: 2,
+    image: sliderImage,
+    title: "فيلا فاخرة",
+    location: "شارع النخيل، دبي",
+    price: 980000,
+    beds: 5,
+    baths: 4,
+    area: 800,
+  },
+  {
+    id: 3,
+    image: sliderImage,
+    title: "شقة عصرية",
+    location: "شارع الاستقلال، بيروت",
+    price: 350000,
+    beds: 3,
+    baths: 2,
+    area: 400,
+  },
+];
+

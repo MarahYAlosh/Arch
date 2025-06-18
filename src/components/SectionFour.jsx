@@ -27,18 +27,18 @@ export const SectionFour = () => {
       </Box>
 
       <Box sx={servicesContainerStyle}>
-        {/* {projects.map((project, index) => (
+        {projects.map((project, index) => (
           <MotionBox
             key={index}
             sx={serviceItemStyle}
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }} 
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
           >
             <ProjectCard project={project} />
           </MotionBox>
-        ))} */}
+        ))}
       </Box>
     </Box>
   );

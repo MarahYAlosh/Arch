@@ -1,4 +1,3 @@
-
 export const containerStyle = {
   py: 8,
   backgroundColor: "#f9f9f9",
@@ -34,7 +33,7 @@ export const servicesContainerStyle = {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
-  gap: 9,
+  gap: 7,
 };
 
 export const serviceItemStyle = {

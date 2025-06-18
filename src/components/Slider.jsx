@@ -22,7 +22,8 @@ export const Slider = () => {
     >
       {Slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <SlideItem {...slide} />
+<SlideItem {...slide} height="100vh" />
+
         </SwiperSlide>
       ))}
     </Swiper>

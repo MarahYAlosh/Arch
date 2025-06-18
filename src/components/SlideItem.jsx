@@ -5,9 +5,9 @@ import {
   slideButtonStyle,
 } from "./styles/SlideStyle.js";
 
-export const SlideItem = ({ image, title, subtitle }) => {
+export const SlideItem = ({ image, title, subtitle,height }) => {
   return (
-    <Box className="slide-content" sx={slideContentStyle(image)}>
+    <Box className="slide-content" sx={slideContentStyle(image,height)}>
       <Box sx={slideInnerContentStyle}>
         <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
           {title}

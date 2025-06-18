@@ -8,6 +8,7 @@ const SectionThreeStyles = {
     display: "flex",
     justifyContent: "center",
     gap: 5,
+      flexWrap: "wrap"
   },
 
   textSection: {
@@ -18,7 +19,7 @@ const SectionThreeStyles = {
     padding: { xs: "30px", md: "0 50px" },
     textAlign: { xs: "center", md: "right" },
     direction: "rtl",
-    width: { xs: "auto", md: "40%", lg: "45%" },
+    width: { xs: "100%", md: "40%", lg: "45%" },
   },
 
   heading: {
@@ -49,12 +50,12 @@ const SectionThreeStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: { xs: "auto", md: "40%", lg: "45%" },
+    width: { xs: "80%", md: "40%", lg: "45%" },
   },
 
   image: {
     width: "90%",
-    maxWidth: "500px",
+    maxWidth: "100%",
     height: "100%",
     objectFit: "cover",
   },

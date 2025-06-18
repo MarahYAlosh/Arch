@@ -1,7 +1,7 @@
 
-export const slideContentStyle = (image) => ({
+export const slideContentStyle = (image,height) => ({
   width: '100%',
-  height: '100vh',
+  height: height,
   backgroundImage: `url(${image})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
