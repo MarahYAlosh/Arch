@@ -7,6 +7,8 @@ export const titleWrapperStyle = {
   py: 8,
   backgroundColor: "#f9f9f9",
   display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
   justifyContent: "center",
 };
 
@@ -33,7 +35,7 @@ export const servicesContainerStyle = {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
-  gap: 7,
+  gap: 6,
 };
 
 export const serviceItemStyle = {
@@ -46,7 +48,7 @@ export const serviceItemStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
-  padding: "2% 4%",
+  padding: "1% 2%",
   borderRadius: 2,
 };
 

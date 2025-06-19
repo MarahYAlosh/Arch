@@ -4,7 +4,7 @@ import BedIcon from "@mui/icons-material/Bed";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-// import pic from '../assets/images/slider.jpg'
+
 import {
   containerStyle,
   servicesContainerStyle,

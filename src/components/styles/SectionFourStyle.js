@@ -1,5 +1,3 @@
-// ProjectCardStyles.js
-
 const styles = {
   container: {
     width: "100%",

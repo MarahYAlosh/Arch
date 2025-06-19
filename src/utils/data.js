@@ -2,6 +2,12 @@ import sliderImage from "../assets/images/slider.jpg";
 import serviceImage from "../assets/images/pic1.png";
 import serviceImage2 from "../assets/images/pic2.png";
 import projectImage from "../assets/images/proj.jpg";
+import teamMemberImage1 from "../assets/images/teamMember1.jpg";
+import teamMemberImage2 from "../assets/images/teamMember2.jpg";
+import teamMemberImage3 from "../assets/images/teamMember3.jpg";
+import works3 from "../assets/images/works3.jpg";
+import works2 from "../assets/images/works2.jpg";
+import works1 from "../assets/images/works1.jpg";
 
 export const pagesHeader = [
   { name: "الرئيسية", path: "/" },
@@ -52,7 +58,7 @@ export const projects = [
     id: 1,
     title: "مشروع 1",
     description: "قم بترقية مساحاتك",
-    image:projectImage,
+    image: projectImage,
   },
   {
     id: 2,
@@ -67,7 +73,6 @@ export const projects = [
     image: projectImage,
   },
 ];
-
 
 export const properties = [
   {
@@ -102,3 +107,30 @@ export const properties = [
   },
 ];
 
+export const teamMembers = [
+  {
+    id: 1,
+    title: "اسم المهندس ",
+    description: "اختصاص : التصميم المعماري ",
+    image: teamMemberImage1,
+  },
+  {
+    id: 2,
+    title: "اسم المهندس ",
+    description: "اختصاص : التصميم المعماري ",
+    image: teamMemberImage2,
+  },
+  {
+    id: 3,
+    title: "اسم المهندس ",
+    description: "اختصاص : التصميم المعماري ",
+    image: teamMemberImage3,
+  },
+];
+
+export const images = [
+  { src: works1, alt: "Image 1" },
+  { src: works3, alt: "Image 2" }, 
+  { src: works2, alt: "Image 3" },
+  { src: works1, alt: "Image 4" },
+];

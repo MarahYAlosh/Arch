@@ -8,7 +8,7 @@ const SectionThreeStyles = {
     display: "flex",
     justifyContent: "center",
     gap: 5,
-      flexWrap: "wrap"
+    flexWrap: "wrap",
   },
 
   textSection: {
@@ -24,13 +24,14 @@ const SectionThreeStyles = {
 
   heading: {
     lineHeight: 3,
-    fontWeight: "bold",
-    fontSize: { xs: "18px", md: "20px", lg: "20px" },
+    fontWeight: 700,
+    fontSize: { xs: "18px", md: "20px", lg: "23px" },
   },
 
   paragraph: {
     color: "#545454",
     width: "90%",
+    lineHeight: { xs: 1.4, md: 2, lg: 2.1 },
   },
 
   subtitle: {
