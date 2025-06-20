@@ -5,6 +5,9 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
 import { About } from "./components/About";
+import { Services } from "./components/Services";
+import { Works } from "./components/Works";
+import { Properties } from "./components/Properties";
 function App() {
   return (
     <Box m="auto">
@@ -13,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Works />} />
+          <Route path="/properties" element={<Properties />} />
         </Routes>
         <Footer />
       </Router>

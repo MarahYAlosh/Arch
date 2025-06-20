@@ -14,7 +14,7 @@ export const pagesHeader = [
   { name: "من نحن", path: "/about" },
   { name: "خدماتنا", path: "/services" },
   { name: "أعمالنا", path: "/projects" },
-  { name: "ملكيات", path: "/properties" },
+  { name: "عقاراتنا", path: "/properties" },
 ];
 
 export const Slides = [
@@ -133,4 +133,14 @@ export const images = [
   { src: works3, alt: "Image 2" }, 
   { src: works2, alt: "Image 3" },
   { src: works1, alt: "Image 4" },
+];
+
+
+export const categories = [
+  "كل الأعمال",
+  "حمامات",
+  "مطابخ",
+  "مكاتب",
+  "أقسام",
+  "غرف معيشة",
 ];
