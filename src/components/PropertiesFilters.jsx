@@ -26,6 +26,7 @@ import {
   searchButtonStyle,
   filterButtonStyle,
 } from "./styles/PropertiesFiltersStyle";
+import { Link } from "react-router-dom";
 export default function PropertiesFilters() {
   const MotionBox = motion(Box);
   const [tabValue, setTabValue] = useState(0);
@@ -98,7 +99,12 @@ export default function PropertiesFilters() {
             viewport={{ once: false, amount: 0.3 }}
           >
             <Grid item xs={12} sm={6} md={4} key={property.id}>
-              <PropertyCard {...property} />
+              <Link
+                to={`/properties/detail`}
+                style={{ textDecoration: "none" }}
+              >
+                <PropertyCard {...property} />
+              </Link>
             </Grid>
           </MotionBox>
         ))}

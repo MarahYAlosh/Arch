@@ -1,18 +1,20 @@
 import React from "react";
-import { MainHeader } from "./MainHeader";
+import { MainHeader } from "../components/MainHeader";
 import {
   containerStyle,
   titleBoxStyle,
   titleStyle,
   titleWrapperStyle,
   underlineStyle,
-} from "./styles/SectionTwoStyle";
+} from "../components/styles/SectionTwoStyle";
 import { Box, Typography } from "@mui/material";
-import PropertiesFilters from "./PropertiesFilters";
+import PropertiesFilters from "../components/PropertiesFilters";
+import { Header } from "../components/Header";
 
 export const Properties = () => {
   return (
     <>
+      <Header />
       <MainHeader text=" عقاراتنا" />
       <Box sx={containerStyle}>
         <Box sx={titleWrapperStyle}>

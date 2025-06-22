@@ -4,21 +4,25 @@ import { Box } from "@mui/material";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
-import { About } from "./components/About";
-import { Services } from "./components/Services";
-import { Works } from "./components/Works";
-import { Properties } from "./components/Properties";
+import { About } from "./pages/About";
+import { Services } from "./pages/Services";
+import { Works } from "./pages/Works";
+import { Properties } from "./pages/Properties";
+import { DetailProperty } from "./pages/DetailProperty";
+import { Contact } from "./pages/Contact";
 function App() {
   return (
     <Box m="auto">
       <Router>
-        <Header />
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Works />} />
           <Route path="/properties" element={<Properties />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/properties/detail" element={<DetailProperty />} />
         </Routes>
         <Footer />
       </Router>

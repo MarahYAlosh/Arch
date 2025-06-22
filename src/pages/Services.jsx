@@ -1,5 +1,5 @@
 import React from "react";
-import { MainHeader } from "./MainHeader";
+import { MainHeader } from "../components/MainHeader";
 import { Box, Typography } from "@mui/material";
 import {
   containerStyle,
@@ -7,15 +7,17 @@ import {
   titleStyle,
   titleWrapperStyle,
   underlineStyle,
-} from "./styles/SectionTwoStyle";
-import { SectionService } from "./SectionService";
+} from "../components/styles/SectionTwoStyle";
+import { SectionService } from "../components/SectionService";
 import pic1 from "../assets/images/service1.jpg";
 import pic2 from "../assets/images/service2.jpg";
 import pic3 from "../assets/images/service3.jpg";
 import pic4 from "../assets/images/service4.jpg";
+import { Header } from "../components/Header";
 export const Services = () => {
   return (
     <>
+      <Header />
       <MainHeader text=" الخدمات" />
       <Box sx={containerStyle}>
         <Box sx={titleWrapperStyle}>

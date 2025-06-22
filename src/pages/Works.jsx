@@ -1,5 +1,5 @@
 import React from "react";
-import { MainHeader } from "./MainHeader";
+import { MainHeader } from "../components/MainHeader";
 import { Box, Button, Typography } from "@mui/material";
 import {
   containerStyle,
@@ -9,17 +9,19 @@ import {
   titleStyle,
   titleWrapperStyle,
   underlineStyle,
-} from "./styles/SectionTwoStyle";
+} from "../components/styles/SectionTwoStyle";
 import { projects } from "../utils/data";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "../components/ProjectCard";
 import { motion } from "framer-motion";
-import { WorkFilter } from "./WorkFilter";
+import { WorkFilter } from "../components/WorkFilter";
+import { Header } from "../components/Header";
 
 export const Works = () => {
   const MotionBox = motion(Box);
 
   return (
     <>
+      <Header />
       <MainHeader text=" أعمالنا" />
       <Box sx={containerStyle}>
         <Box sx={titleWrapperStyle}>

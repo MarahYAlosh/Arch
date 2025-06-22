@@ -3,14 +3,10 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Typography,
   Button,
   Box,
   Container,
   Drawer,
-  List,
-  ListItem,
-  ListItemText,
   MenuItem,
   Select,
 } from "@mui/material";
@@ -19,7 +15,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo.jpg";
 
-import { motion } from "framer-motion";
 import { pagesHeader } from "../utils/data";
 import {
   appBarStyle,
@@ -31,7 +26,9 @@ import {
   drawerListBoxStyle,
   drawerButtonStyle,
 } from "./styles/headerStyles";
-export const Header = () => {
+import SectionThreeStyles from "./styles/SectionThreeStyle";
+import { motion } from "framer-motion";
+export const Header = ({ main = false }) => {
   const [open, setOpen] = useState(false);
   const [language, setLanguage] = useState("ar");
   const location = useLocation();
@@ -64,17 +61,28 @@ export const Header = () => {
                   <MenuIcon />
                 </IconButton>
               </Box>
-
-              <Select
-                value={language}
-                onChange={handleLanguageChange}
-                variant="standard"
-                disableUnderline
-                sx={languageSelectStyle}
-              >
-                <MenuItem value="ar">العربية</MenuItem>
-                <MenuItem value="en">English</MenuItem>
-              </Select>
+              {main ? (
+                <Select
+                  value={language}
+                  onChange={handleLanguageChange}
+                  variant="standard"
+                  disableUnderline
+                  sx={languageSelectStyle}
+                >
+                  <MenuItem value="ar">العربية</MenuItem>
+                  <MenuItem value="en">English</MenuItem>
+                </Select>
+              ) : (
+                <Link to={`/contact`} style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    size="large"
+                    sx={SectionThreeStyles.button}
+                  >
+                    تواصل معنا
+                  </Button>
+                </Link>
+              )}
             </Box>
 
             <Box sx={{ display: "flex", alignItems: "center" }}>
