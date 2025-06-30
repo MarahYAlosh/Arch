@@ -4,10 +4,11 @@ import {
   slideInnerContentStyle,
   slideButtonStyle,
 } from "./styles/SlideStyle.js";
+import { Link } from "react-router-dom";
 
-export const SlideItem = ({ image, title, subtitle,height }) => {
+export const SlideItem = ({ image, title, subtitle, height }) => {
   return (
-    <Box className="slide-content" sx={slideContentStyle(image,height)}>
+    <Box className="slide-content" sx={slideContentStyle(image, height)}>
       <Box sx={slideInnerContentStyle}>
         <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
           {title}
@@ -15,9 +16,12 @@ export const SlideItem = ({ image, title, subtitle,height }) => {
         <Typography variant="h5" component="h3" gutterBottom>
           {subtitle}
         </Typography>
-        <Button variant="contained" size="large" sx={slideButtonStyle}>
-          ابدأ مشروعك
-        </Button>
+
+        <Link to={`/contact`} style={{ textDecoration: "none" }}>
+          <Button variant="contained" size="large" sx={slideButtonStyle}>
+            ابدأ مشروعك
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

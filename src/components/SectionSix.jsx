@@ -17,6 +17,7 @@ import PropertyCard from "./PropertyCard";
 import { properties } from "../utils/data";
 import { slideButtonStyle } from "./styles/SlideStyle";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const SectionSix = () => {
   const MotionBox = motion(Box);
@@ -50,9 +51,11 @@ export const SectionSix = () => {
       <Box
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
-        <Button variant="contained" size="large" sx={slideButtonStyle}>
-          معرفة المزيد
-        </Button>
+        <Link to={`/properties`} style={{ textDecoration: "none" }}>
+          <Button variant="contained" size="large" sx={slideButtonStyle}>
+            معرفة المزيد
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

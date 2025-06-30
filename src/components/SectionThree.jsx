@@ -4,6 +4,7 @@ import pic from "../assets/images/tasmem.png";
 import { motion } from "framer-motion";
 
 import styles from "./styles/SectionThreeStyle";
+import { Link } from "react-router-dom";
 export const SectionThree = () => {
   return (
     <Box sx={styles.root}>
@@ -33,10 +34,11 @@ export const SectionThree = () => {
           <Typography variant="subtitle1" sx={styles.subtitle}>
             التصميم داخلي لغرف المكاتب التجارية
           </Typography>
-
-          <Button variant="contained" size="large" sx={styles.button}>
-            معرفة المزيد
-          </Button>
+          <Link to={`/about`} style={{ textDecoration: "none" }}>
+            <Button variant="contained" size="large" sx={styles.button}>
+              معرفة المزيد
+            </Button>
+          </Link>
         </Grid>
 
         <Grid

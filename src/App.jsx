@@ -14,7 +14,6 @@ function App() {
   return (
     <Box m="auto">
       <Router>
-       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
