@@ -18,15 +18,17 @@ import { properties } from "../utils/data";
 import { slideButtonStyle } from "./styles/SlideStyle";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const SectionSix = () => {
+  const { t } = useTranslation();
   const MotionBox = motion(Box);
   return (
     <Box sx={containerStyle}>
       <Box sx={titleWrapperStyle}>
         <Box sx={titleBoxStyle}>
           <Typography variant="h4" gutterBottom sx={titleStyle}>
-            أحدث العقارات
+              {t("Latestrealestate")} 
           </Typography>
           <Box sx={underlineStyle} />
         </Box>
@@ -53,7 +55,7 @@ export const SectionSix = () => {
       >
         <Link to={`/properties`} style={{ textDecoration: "none" }}>
           <Button variant="contained" size="large" sx={slideButtonStyle}>
-            معرفة المزيد
+            {t("learnMoreButton")}
           </Button>
         </Link>
       </Box>

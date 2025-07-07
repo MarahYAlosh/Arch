@@ -31,6 +31,7 @@ export const slideInnerContentStyle = {
 export const slideButtonStyle = {
   mt: 2,
   backgroundColor: '#1F1F1F',
+   textTransform:"none",
   color: '#fff',
   '&:hover': {
     backgroundColor: '#333',

@@ -1,0 +1,176 @@
+{
+  "NavbarMain": "Home",
+  "NavbarAboutUs": "About Us",
+  "NavbarServices": "Services",
+  "NavbarOurWork": "Our Work",
+  "NavbarProperties": "Properties",
+  "contactButton":"Contact Us",
+  "StartProjectButton":"Start Project",
+  "OurServices":"Our Services",
+  "OurServicesLandscapeTitle":"Landscape",
+  "OurServicesLandscapeDesc":"Achieve the perfect balance of ambient, task, and accent lighting for a functional atmosphere",
+  "OurServicesInteriorSupervisionTitle":"Interior& Supervision",
+  "OurServicesInteriorSupervisionDesc":"From concept to completion, we oversee every detail to bring your vision to life efficiently",
+  "OurServicesSalePurchaseTitle":"Sale & Purchase",
+  "OurServicesSalePurchaseDesc":"Celebrate the changing seasons with our seasonal outdoor decor services",
+
+"BrillianceTitle" : "Designing Your Dream With Brilliance",
+"BrillianceDesc" : "Elevate your spaces with bespoke interior designs that reflect your unique style and aspirations, crafted with precision and brilliance for an unforgettable living experience",
+"FirstIdeaTitle" :"Living Room Interior Design",
+"FirstIdeaDesc" :"It is a service aimed at transforming your space into a comfortable and stylish environment that reflects your personal style. The process includes assessing the space, planning the design",
+"SecondIdeaTitle" :"Commercial Office Room Interior Design",
+"SecondIdeaDesc" :"The commercial office room interior design service offers customized solutions to enhance work environments, focusing on improving productivity and comfort.",
+"learnMoreButton":"Learn More",
+"StartProject":"Start Project",
+"PopularProperties":"Popular Properties",
+"Latestrealestate " : "احدث العقارات",
+
+  "footer": {
+    "companyName": "ARCH Real Estate.Co",
+    "companyDescription": "Your ultimate destination for luxury real estate. We strive to provide the best solutions to meet our clients' needs with a focus on quality and innovation.",
+    "mainPage": "Home",
+    "ourServices": "Our Services",
+    "contactInfo": "Contact Information",
+    "email": "info@arcRealeste.com",
+    "address": "Derras Amino Sanville, California 9021 Dubai",
+    "links": {
+      "about": "About Us",
+      "services": "Services",
+      "works": "Our Works",
+      "properties": "Properties"
+    },
+    "services": {
+      "interiorDesign": "Home Interior Design",
+      "exteriorDesign": "Exterior Design",
+      "lightingDesign": "Lighting Design",
+      "officeDesign": "Office Design"
+    }
+  
+},
+
+  "SectionThreeAbout": {
+    "heading": "Design Your Dream in Three Simple Steps",
+    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit amet dictum tortor tincidunt quis. Ut volutpat vitae nunc nec tristique. ",
+    "paragraph2": "We believe that architecture is not just about building, but an expression of art and function. We aim to create spaces that reflect our clients’ identity and meet their aspirations, focusing on beauty and comfort.",
+    "paragraph3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit ",
+    "paragraph4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula",
+    "paragraph5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit amet dictum tortor  "
+  },
+  "TeamSectionAbout" :{
+       "title": "Our Team",
+    "subtitle": "We are a team of creative and passionate architects dedicated to fulfilling our clients’ dreams through unique and innovative designs, blending art and function to create spaces that meet their aspirations and reflect their identity."
+  },
+   "WhyChooseUs": {
+    "heading": "Why Choose Us?",
+    "paragraph1": "At [ARC], we excel in providing comprehensive architectural services that combine creativity and professionalism. Our experienced team of architects possesses unique skills to realize your vision with precision and expertise. We leverage the latest technologies and design methods to ensure high quality and efficiency in execution. We are committed to sustainability by integrating eco-friendly solutions into every project, ensuring that our designs are not only beautiful but also environmentally responsible.",
+    "paragraph2": "We listen to your needs and put them at the forefront of our priorities, making working with us a smooth and enjoyable experience. Choose us to create designs that reflect your identity and meet your aspirations, and we promise to be a trusted partner on your journey to building the future."
+  },
+   "ServicesSection": {
+    "title": "Services",
+    "subtitle": "We are a team of creative and passionate architects, dedicated to fulfilling our clients’ dreams through unique and innovative designs. We blend art and function to create spaces that meet their aspirations and reflect their identity."
+  },
+   "apartmentFinishingTitle": "Apartment Finishing",
+  "apartmentFinishingText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit amet dictum tortor tincidunt quis. Ut volutpat vitae nunc nec tristique. Nulla tincidunt erat a neque rhoncus auctor",
+
+  "interiorDesignTitle": "Interior Design",
+  "interiorDesignText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit amet dictum tortor tincidunt quis. Ut volutpat vitae nunc nec tristique. Nulla tincidunt erat a neque rhoncus auctor",
+
+  "realEstateTitle": "Buying / Selling / Renting Real Estate",
+  "realEstateText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit amet dictum tortor tincidunt quis. Ut volutpat vitae nunc nec tristique. Nulla tincidunt erat a neque rhoncus auctor",
+
+  "projectManagementTitle": "Residential Project Management",
+  "projectManagementText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Vestibulum in pretium ipsum. Phasellus cursus commodo nunc in ullamcorper. In posuere varius ligula, sit amet dictum tortor tincidunt quis. Ut volutpat vitae nunc nec tristique. Nulla tincidunt erat a neque rhoncus auctor",
+"RequestService" :"Request Service",
+
+  "ourWorksText": "We offer you a diverse range of innovative interior design projects executed by our company, each reflecting our commitment to quality and professionalism.They showcase our dedication to meeting our clients' needs and aspirations through unique designs that blend beauty and functionality",
+  "all": "All Works",
+  "bathrooms": "Bathrooms",
+  "kitchens": "Kitchens",
+  "offices": "Offices",
+  "partitions": "Partitions",
+  "livingRooms": "Living Rooms",
+   "realEstate": {
+    "title": "Our Properties",
+    "description": "Explore a diverse range of premium properties that cater to all your needs. We offer various options, including apartments and houses complete with  detailed descriptions and illustrative photos to help you make the perfect decision"
+  },
+   "propertiesFilters": {
+    "tabs": {
+      "rent": "Rent",
+      "sale": "Sale",
+      "all": "All"
+    },
+    "searchPlaceholder": "Enter search term",
+    "types": {
+      "all": "All Types",
+      "apartment": "Apartment",
+      "villa": "Villa"
+    },
+    "buttons": {
+      "search": "Search",
+      "filter": "Filter"
+    }
+  },
+    "propertyDetails": {
+    "mainHeader": "Luxury Residential Apartments",
+    "title": "Villa One Hyde Park",
+    "location": "2050 Bloomingdale Ave",
+    "description": "Enchanting three bedroom, three bath home with spacious one bedroom, one bath cabana, in-laws quarters. Charming living area features fireplace and fabulous art deco details. ...",
+    "features": {
+      "beds": "44 Beds",
+      "baths": "44 Baths",
+      "area": "44 Sq Ft"
+    },
+    "price": "$100",
+    "contactButton":"Contact Us"
+
+  
+},
+"contact" :{
+  "mainHeader": "Contact Us",
+  "appointmentTitle": " Send a request",
+  "appointmentDescription": "Enchanting three bedroom, three bath home with spacious one bedroom, one bath cabana,..",
+  "fullName": "Full Name",
+  "phoneNumber": "Phone Number",
+  "serviceType": "Service Type",
+  "service1": "Service 1",
+  "service2": "Service 2",
+  "description": "Description",
+  "optionalImages": "Optional Images:",
+  "send": "Send",
+  "bookYourProject": "Book a Project",
+  "bookYourProjectDescription": "Enchanting three bedroom, three bath home with spacious one bedroom, one bath cabana,..",
+  "locationTitle": "Location",
+  "locationAddress": "Dubai, Barsha 2, Building 132, Floor 4",
+  "contactUsTitle": "Contact Us",
+  "whatsappNumber": "+971 665 87 453 (WhatsApp)",
+  "phoneNumber2": "+971 665 87 453",
+  "followUs": "Follow us on our social media:",
+  "callUsButton": "Call Us",
+  "callUsProjectTitle": "Call us for your project",
+  "callUsProjectDescription": "Contact us to schedule a meeting to plan your project"
+},
+
+"detailProject" : {
+"description" :"Description",
+"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standarddummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+"location" :"Location",
+"detailLocation" :"Lorem ipsum dolor sit amet",
+"Completiondate" : "Completion date ",
+"Client" : "Client",
+"detailClient":"Lorem ipsum dolor sit amet",
+"SimilarWorks":"Similar Works"
+
+},
+"ModalFilter" :{
+  "Filter" :"Filter",
+  "Price":"Price",
+  "Area": "Area",
+  "Small":"Small",
+  "Medium":"Medium",
+  "Large":"Large",
+  "Region":"Region",
+  "SelectRegion":"Select Region"
+
+}
+
+}

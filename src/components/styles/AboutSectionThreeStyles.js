@@ -54,7 +54,6 @@ export const AboutSectionThreeStyles = {
   },
   textSection: {
     px: { xs: 2, md: 4 },
-    direction: "rtl",
   },
   heading: {
     fontWeight: "bold",

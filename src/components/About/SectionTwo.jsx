@@ -12,15 +12,17 @@ import { Box, Typography } from "@mui/material";
 import { teamMembers } from "../../utils/data";
 import { motion } from "framer-motion";
 import { MemberCard } from "../MemberCard";
+import { useTranslation } from "react-i18next";
 
 export const SectionTwo = () => {
   const MotionBox = motion(Box);
+  const { t } = useTranslation();
   return (
     <Box sx={containerStyle}>
       <Box sx={titleWrapperStyle}>
         <Box sx={titleBoxStyle}>
           <Typography variant="h4" gutterBottom sx={titleStyle}>
-            فريقنا
+            {t("TeamSectionAbout.title")}
           </Typography>
 
           <Box sx={underlineStyle} />
@@ -33,9 +35,7 @@ export const SectionTwo = () => {
             width: { xs: "90%", sm: "68%", md: "52%" },
           }}
         >
-          نحن فريق من المهندسين المعماريين المبدعين والمتحمسين، نكرس جهودنا
-          لتحقيق أحلام عملائنا من خلال تصميمات فريدة ومبتكرة، حيث ندمج بين الفن
-          والوظيفة لنخلق مساحات تلبي تطلعاتهم وتعكس هويتهم
+          {t("TeamSectionAbout.subtitle")}
         </Typography>
       </Box>
 

@@ -36,6 +36,7 @@ export const servicesContainerStyle = {
   flexWrap: "wrap",
   justifyContent: "center",
   gap: 6,
+  mt:4
 };
 
 export const serviceItemStyle = {
@@ -72,6 +73,5 @@ export const serviceAvatarStyle = {
 
 export const serviceDescriptionStyle = {
   margin: "7% 2%",
-  direction: "rtl",
   color: "text.secondary",
 };

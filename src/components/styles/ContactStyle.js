@@ -21,7 +21,7 @@ export const formStyles = {
     justifyContent: "center",
     flexDirection: "column",
     gap: "20px",
-    direction: "rtl",
+  
   },
   divider: {
     mb: 2,

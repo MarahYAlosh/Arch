@@ -21,6 +21,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SectionThreeStyles from "../components/styles/SectionThreeStyle";
 import { formStyles } from "../components/styles/ContactStyle";
 import { MainHeader } from "../components/MainHeader";
+import { useTranslation } from "react-i18next";
 export const Contact = () => {
   const textFieldSx = {
     backgroundColor: "#f0f0f0",
@@ -38,20 +39,178 @@ export const Contact = () => {
       border: "none",
     },
   };
+  const { t } = useTranslation();
   return (
     <>
       <Header />
-      <MainHeader text=" تواصل معنا  " />
+      <MainHeader text={t("contactButton")} />
       <Box sx={formStyles.wrapperBox}>
         <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={6}>
-            <Paper sx={formStyles.paper} elevation={5}>
-              <Typography variant="h4" gutterBottom align="right">
-                حجز الموعد
+          <Grid
+            item
+            xs={12}
+            md={4}
+            mt={5}
+            sx={{
+              width: {
+                xs: "80%",
+                sm: "50%",
+                md: "35%",
+                lg: "30%",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                gap: "20px",
+              }}
+            >
+              <Typography variant="h4" gutterBottom>
+                {t("contact.bookYourProject")}
               </Typography>
-              <Typography variant="body2" gutterBottom align="right">
-                لا تتردد في التواصل معنا لحجز مشروع العمارة المثالي لك، فنحن هنا
-                لتحقيق رؤيتك
+              <Typography
+                variant="body2"
+                gutterBottom
+                sx={{ color: "#7C7C7C" }}
+              >
+                {t("contact.bookYourProjectDescription")}
+              </Typography>
+              <Divider sx={{ mb: 2, bgcolor: "#919191", height: "1px" }} />
+
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+                flexDirection="row-reverse"
+                p={2}
+                gap={2}
+              >
+                <Stack
+                  spacing={0.5}
+                  flexDirection="column"
+                  alignItems="flex-end"
+                >
+                  <Typography variant="h6" width="100%" fontWeight="bold">
+                    {t("contact.locationTitle")}
+                  </Typography>
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="flex-end"
+                    flexDirection="column"
+                  >
+                    <Typography variant="body2" color="text.secondary">
+                      {t("contact.locationAddress")}
+                    </Typography>
+                  </Box>
+                </Stack>
+                <Avatar sx={{ bgcolor: "black", width: 40, height: 40, ml: 2 }}>
+                  <LocationOnIcon sx={{ color: "white" }} />
+                </Avatar>
+              </Box>
+
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+                flexDirection="row-reverse"
+                p={2}
+                gap={2}
+              >
+                <Stack
+                  spacing={0.5}
+                  flexDirection="column"
+                  alignItems="flex-end"
+                >
+                  <Typography variant="h6" width="100%" fontWeight="bold">
+                    {t("contact.contactUsTitle")}
+                  </Typography>
+                  <Box
+                    display="flex"
+                    alignItems="start"
+                    justifyContent="flex-end"
+                    flexDirection="column"
+                  >
+                    <Typography variant="body2" color="text.secondary">
+                      +971 665 87 453 (whats app)
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      +971 665 87 453
+                    </Typography>
+                  </Box>
+                </Stack>
+                <Avatar sx={{ bgcolor: "black", width: 40, height: 40, ml: 2 }}>
+                  <CallIcon sx={{ color: "white" }} />
+                </Avatar>
+              </Box>
+              <Divider sx={{ mb: 2, bgcolor: "#919191", height: "1px" }} />
+
+              <Typography mt={3} variant="h5">
+                {t("contact.followUs")}
+              </Typography>
+              <Box display="flex" justifyContent="right" gap="15px" mt={1}>
+                <Box
+                  sx={{
+                    background: "#313131",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "30px",
+                    height: "30px",
+                  }}
+                >
+                  <FacebookIcon sx={{ color: "white" }} />
+                </Box>
+                <Box
+                  sx={{
+                    background: "#313131",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "30px",
+                    height: "30px",
+                  }}
+                >
+                  <InstagramIcon sx={{ color: "white" }} />
+                </Box>
+                <Box
+                  sx={{
+                    background: "#313131",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "30px",
+                    height: "30px",
+                  }}
+                >
+                  <LinkedInIcon sx={{ color: "white" }} />
+                </Box>
+              </Box>
+            </Box>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              width: {
+                xs: "80%",
+                sm: "50%",
+                md: "35%",
+                lg: "30%",
+              },
+            }}
+          >
+            <Paper sx={formStyles.paper} elevation={5}>
+              <Typography variant="h4" gutterBottom>
+                {t("contact.appointmentTitle")}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                {t("contact.appointmentDescription")}
               </Typography>
               <Box
                 component="form"
@@ -61,24 +220,20 @@ export const Contact = () => {
               >
                 <Grid container spacing={2} direction="column">
                   <Grid item xs={12}>
-                    <Typography align="right" gutterBottom>
-                      الاسم الكامل
-                    </Typography>
-                    <TextField
-                      fullWidth
-                      variant="outlined"
-                      sx={formStyles.textField}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Typography align="right" gutterBottom>
-                      رقم الهاتف
+                    <Typography gutterBottom>
+                      {t("contact.fullName")}
                     </Typography>
                     <TextField fullWidth variant="outlined" sx={textFieldSx} />
                   </Grid>
                   <Grid item xs={12}>
-                    <Typography align="right" gutterBottom>
-                      نوع الخدمة
+                    <Typography gutterBottom>
+                      {t("contact.phoneNumber")}
+                    </Typography>
+                    <TextField fullWidth variant="outlined" sx={textFieldSx} />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Typography gutterBottom>
+                      {t("contact.serviceType")}
                     </Typography>
                     <TextField
                       fullWidth
@@ -86,19 +241,23 @@ export const Contact = () => {
                       variant="outlined"
                       sx={textFieldSx}
                     >
-                      <MenuItem value="service1">خدمة 1</MenuItem>
-                      <MenuItem value="service2">خدمة 2</MenuItem>
+                      <MenuItem value="service1">
+                        {t("contact.service1")}
+                      </MenuItem>
+                      <MenuItem value="service2">
+                        {t("contact.service2")}
+                      </MenuItem>
                     </TextField>
                   </Grid>
                   <Grid item xs={12}>
-                    <Typography align="right" gutterBottom>
-                      الوصف
+                    <Typography gutterBottom>
+                      {t("contact.description")}
                     </Typography>
                     <TextField fullWidth variant="outlined" sx={textFieldSx} />
                   </Grid>
                   <Grid item xs={12}>
-                    <Typography align="right" gutterBottom>
-                      صور اختيارية:
+                    <Typography gutterBottom>
+                      {t("contact.optionalImages")}
                     </Typography>
                     <TextField
                       fullWidth
@@ -115,161 +274,13 @@ export const Contact = () => {
                   fullWidth
                   sx={SectionThreeStyles.button}
                 >
-                  إرسال
+                  {t("contact.send")}
                 </Button>
               </Box>
             </Paper>
           </Grid>
-          <Grid item xs={12} md={4} mt={5}>
-            <Box
-              textAlign="right"
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                gap: "20px",
-                direction: "rtl",
-              }}
-            >
-              <Typography variant="h4" gutterBottom>
-                احجز مشروعك
-              </Typography>
-              <Typography
-                variant="body2"
-                gutterBottom
-                sx={{ color: "#7C7C7C" }}
-              >
-                لا تفوت الفرصة! احجز مشروعك معنا اليوم وابدأ في تحويل رؤيتك إلى
-                واقع متكامل
-              </Typography>
-              <Divider sx={{ mb: 2, bgcolor: "#919191", height: "1px" }} />
-
-              <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-                flexDirection="row-reverse"
-                p={2}
-              >
-                <Stack
-                  spacing={0.5}
-                  flexDirection="column"
-                  alignItems="flex-end"
-                >
-                  <Typography
-                    variant="h6"
-                    width="100%"
-                    fontWeight="bold"
-                    textAlign="right"
-                  >
-                    الموقع
-                  </Typography>
-
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="flex-end"
-                    flexDirection="column"
-                  >
-                    <Typography variant="body2" color="text.secondary">
-                      دبي برشا2 البناء 132 الطابق 4
-                    </Typography>
-                  </Box>
-                </Stack>
-                <Avatar sx={{ bgcolor: "black", width: 40, height: 40, ml: 2 }}>
-                  <CallIcon sx={{ color: "white" }} />
-                </Avatar>
-              </Box>
-
-              <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-                flexDirection="row-reverse"
-                p={2}
-              >
-                <Stack
-                  spacing={0.5}
-                  flexDirection="column"
-                  alignItems="flex-end"
-                >
-                  <Typography
-                    variant="h6"
-                    width="100%"
-                    fontWeight="bold"
-                    textAlign="right"
-                  >
-                    اتصل بنا
-                  </Typography>
-
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="flex-end"
-                    flexDirection="column"
-                  >
-                    <Typography variant="body2" color="text.secondary">
-                      +971 665 87 453 ( whats app )
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      +971 665 87 453
-                    </Typography>
-                  </Box>
-                </Stack>
-                <Avatar sx={{ bgcolor: "black", width: 40, height: 40, ml: 2 }}>
-                  <CallIcon sx={{ color: "white" }} />
-                </Avatar>
-              </Box>
-              <Divider sx={{ mb: 2, bgcolor: "#919191", height: "1px" }} />
-              <Typography mt={3} variant="h5">
-                تابعنا وسائل الإعلام الاجتماعية لدينا:
-              </Typography>
-              <Box display="flex" justifyContent="right" gap="15px" mt={1}>
-                <Box
-                  sx={{
-                    background: "#313131",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "30px",
-                    height: "30px",
-                  }}
-                >
-                  {" "}
-                  <FacebookIcon sx={{ color: "white" }} />
-                </Box>
-
-                <Box
-                  sx={{
-                    background: "#313131",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "30px",
-                    height: "30px",
-                  }}
-                >
-                  {" "}
-                  <InstagramIcon sx={{ color: "white" }} />
-                </Box>
-
-                <Box
-                  sx={{
-                    background: "#313131",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "30px",
-                    height: "30px",
-                  }}
-                >
-                  {" "}
-                  <LinkedInIcon sx={{ color: "white" }} />
-                </Box>
-              </Box>
-            </Box>
-          </Grid>
         </Grid>
+
         <Box
           sx={{
             background: "#000000",
@@ -286,9 +297,8 @@ export const Contact = () => {
             color="inherit"
             sx={{ background: "#FFFFFF", color: "#000", p: "5px 50px" }}
           >
-            Call Us
+            {t("contact.callUsButton")}
           </Button>
-
           <Box
             sx={{
               display: "flex",
@@ -299,9 +309,11 @@ export const Contact = () => {
               gap: "25px",
             }}
           >
-            <Typography variant="h6">اتصل بنا للحصول على المشروع</Typography>
+            <Typography variant="h6">
+              {t("contact.callUsProjectTitle")}
+            </Typography>
             <Typography variant="body2" sx={{ mb: 2 }}>
-              اتصل بنا لتحديد موعد للتخطيط لمشروعك
+              {t("contact.callUsProjectDescription")}
             </Typography>
           </Box>
         </Box>

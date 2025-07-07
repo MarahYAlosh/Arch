@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -28,9 +28,22 @@ import {
 } from "./styles/headerStyles";
 import SectionThreeStyles from "./styles/SectionThreeStyle";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 export const Header = ({ main = false }) => {
+  const { t, i18n } = useTranslation();
+
+  const [language, setLanguage] = useState(i18n.language || "ar");
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language]);
+  const handleLanguageChange = (e) => {
+    const newLang = e.target.value;
+    setLanguage(newLang);
+    i18n.changeLanguage(newLang);
+  };
+
   const [open, setOpen] = useState(false);
-  const [language, setLanguage] = useState("ar");
   const location = useLocation();
 
   const toggleDrawer = (isOpen) => (event) => {
@@ -43,9 +56,6 @@ export const Header = ({ main = false }) => {
     setOpen(isOpen);
   };
 
-  const handleLanguageChange = (e) => {
-    setLanguage(e.target.value);
-  };
   return (
     <motion.div
       initial={{ y: -50, opacity: 0 }}
@@ -55,6 +65,30 @@ export const Header = ({ main = false }) => {
       <AppBar position="static" sx={appBarStyle}>
         <Container maxWidth="xl">
           <Toolbar sx={toolbarStyle}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Link to="/">
+                <img style={{ width: "100%", height: "45px" }} src={logo} />
+              </Link>
+              <Box
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  flexDirection: "row",
+                  mr: 5,
+                }}
+              >
+                {pagesHeader.map((page) => (
+                  <Button
+                    key={page.name}
+                    component={Link}
+                    to={page.path}
+                    sx={navButtonStyle(location.pathname === page.path)}
+                  >
+                    {t(page.nameKey)}
+                  </Button>
+                ))}
+              </Box>
+            </Box>
+
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "flex", md: "none" } }}>
                 <IconButton onClick={toggleDrawer(true)} sx={{ color: "#333" }}>
@@ -67,9 +101,9 @@ export const Header = ({ main = false }) => {
                   onChange={handleLanguageChange}
                   variant="standard"
                   disableUnderline
-                  sx={languageSelectStyle}
+                  sx={{ minWidth: 120 }}
                 >
-                  <MenuItem value="ar">العربية</MenuItem>
+                  <MenuItem value="ar"> العربية</MenuItem>
                   <MenuItem value="en">English</MenuItem>
                 </Select>
               ) : (
@@ -79,35 +113,10 @@ export const Header = ({ main = false }) => {
                     size="large"
                     sx={SectionThreeStyles.button}
                   >
-                    تواصل معنا
+                    {t("contactButton")}
                   </Button>
                 </Link>
               )}
-            </Box>
-
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Box
-                sx={{
-                  display: { xs: "none", md: "flex" },
-                  flexDirection: "row-reverse",
-                  mr: 5,
-                }}
-              >
-                {pagesHeader.map((page) => (
-                  <Button
-                    key={page.name}
-                    component={Link}
-                    to={page.path}
-                    sx={navButtonStyle(location.pathname === page.path)}
-                  >
-                    {page.name}
-                  </Button>
-                ))}
-              </Box>
-
-              <Link to="/">
-                <img style={{ width: "100%", height: "45px" }} src={logo} />
-              </Link>
             </Box>
           </Toolbar>
         </Container>

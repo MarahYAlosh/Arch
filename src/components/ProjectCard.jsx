@@ -12,7 +12,7 @@ import styles from "./styles/SectionFourStyle";
 
 export const ProjectCard = ({ project }) => {
   return (
-   <Box sx={styles.container}>
+   <Box sx={styles.container} >
       <Card sx={styles.card(project.image)}>
         <Box sx={styles.overlay}>
           <Box sx={styles.header}>

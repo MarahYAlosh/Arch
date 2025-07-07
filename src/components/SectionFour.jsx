@@ -12,15 +12,17 @@ import { Box, Grid, Typography } from "@mui/material";
 import { projects } from "../utils/data";
 import { ProjectCard } from "./ProjectCard";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export const SectionFour = () => {
+  const { t } = useTranslation();
   const MotionBox = motion(Box);
   return (
     <Box sx={containerStyle}>
       <Box sx={titleWrapperStyle}>
         <Box sx={titleBoxStyle}>
           <Typography variant="h4" gutterBottom sx={titleStyle}>
-            أعمالنا
+            {t("PopularProperties")}
           </Typography>
           <Box sx={underlineStyle} />
         </Box>

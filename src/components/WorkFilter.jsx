@@ -1,9 +1,12 @@
 import { Box, Button } from "@mui/material";
 import React, { useState } from "react";
 import { categories } from "../utils/data";
+import { useTranslation } from "react-i18next";
 
 export const WorkFilter = () => {
   const [active, setActive] = useState("كل الأعمال");
+  const { t } = useTranslation();
+
   return (
     <Box
       sx={{
@@ -43,7 +46,7 @@ export const WorkFilter = () => {
               },
             }}
           >
-            {cat}
+            {t(cat.nameKey)}
           </Button>
         ))}
       </Box>

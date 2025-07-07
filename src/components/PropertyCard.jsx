@@ -124,7 +124,7 @@ const PropertyCard = ({ image, title, location, price, beds, baths, area }) => {
         </Grid>
       </Box>
 
-      <Box sx={{ px: 2, pb: 2, direction: "rtl" }}>
+      <Box sx={{ px: 2, pb: 2,  }}>
         <Box
           sx={{
             display: "flex",

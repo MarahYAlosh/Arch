@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -10,6 +10,7 @@ import { Works } from "./pages/Works";
 import { Properties } from "./pages/Properties";
 import { DetailProperty } from "./pages/DetailProperty";
 import { Contact } from "./pages/Contact";
+import { DetailProject } from "./pages/DetailProject";
 function App() {
   return (
     <Box m="auto">
@@ -22,6 +23,7 @@ function App() {
           <Route path="/properties" element={<Properties />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/properties/detail" element={<DetailProperty />} />
+          <Route path="/projects/detail" element={<DetailProject />} />
         </Routes>
         <Footer />
       </Router>

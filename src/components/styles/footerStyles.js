@@ -5,7 +5,6 @@ const footerStyles = {
     p: 4,
     mt: 4,
     fontSize: "0.875rem",
-    direction: "rtl",
   },
   logoBox: {
     mb: 2,

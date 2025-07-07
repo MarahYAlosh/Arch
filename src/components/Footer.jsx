@@ -5,10 +5,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logo from "../assets/images/logo.png";
 import React from "react";
-import { motion } from "framer-motion";
 import footerStyles from "./styles/footerStyles";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box component="footer" sx={footerStyles.footerBox}>
       <Grid container spacing={2} justifyContent="space-between">
@@ -17,11 +18,10 @@ export const Footer = () => {
             <img src={logo} alt="ARCH" style={footerStyles.logoImg} />
           </Box>
           <Typography variant="body2" sx={footerStyles.boldWhiteText}>
-            ARCH Real Estate.Co
+            {t("footer.companyName")}
           </Typography>
           <Typography variant="body2" sx={footerStyles.textBody}>
-            وهدفكم الأمثل للعقارات الفاخرة نسعى جاهدين لتقديم أفضل الحلول لتلبية
-            احتياجات عملائنا مع التركيز على الجودة والابتكار.
+            {t("footer.companyDescription")}
           </Typography>
           <Box>
             <IconButton
@@ -60,17 +60,17 @@ export const Footer = () => {
             variant="subtitle1"
             sx={{ ...footerStyles.subtitle, textDecoration: "none" }}
           >
-            الصفحة الرئيسية
+            {t("footer.mainPage")}
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            {["من نحن", "خدماتنا", "أعمالنا", "ممتلكات"].map((text) => (
+            {["about", "services", "works", "properties"].map((key) => (
               <Link
-                key={text}
+                key={key}
                 href="#"
                 color="inherit"
                 sx={footerStyles.linkStyle}
               >
-                {text}
+                {t(`footer.links.${key}`)}
               </Link>
             ))}
           </Box>
@@ -78,27 +78,27 @@ export const Footer = () => {
 
         <Grid item xs={12} md={3}>
           <Typography variant="subtitle1" sx={footerStyles.subtitle}>
-            خدماتنا
+            {t("footer.ourServices")}
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
             {[
-              "تصميم داخلي للمنزل",
-              "تصميم خارجي",
-              "تصميم الإضاءة",
-              "تصميم المكتب",
-            ].map((item) => (
-              <Typography key={item}>{item}</Typography>
+              "interiorDesign",
+              "exteriorDesign",
+              "lightingDesign",
+              "officeDesign",
+            ].map((key) => (
+              <Typography key={key}>{t(`footer.services.${key}`)}</Typography>
             ))}
           </Box>
         </Grid>
 
         <Grid item xs={12} md={3}>
           <Typography variant="subtitle1" sx={footerStyles.subtitle}>
-            معلومات الاتصال
+            {t("footer.contactInfo")}
           </Typography>
-          <Typography>info@arcRealeste.com</Typography>
+          <Typography>{t("footer.email")}</Typography>
           <Typography sx={footerStyles.contactInfo}>
-            ديراز أمينتو سنفيل، كاليفورنيا 9021 دبي
+            {t("footer.address")}
           </Typography>
         </Grid>
       </Grid>

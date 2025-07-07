@@ -9,6 +9,7 @@ const SectionThreeStyles = {
     justifyContent: "center",
     gap: 5,
     flexWrap: "wrap",
+    height: "auto",
   },
 
   textSection: {
@@ -17,8 +18,6 @@ const SectionThreeStyles = {
     justifyContent: "center",
     alignItems: { xs: "center", md: "flex-start" },
     padding: { xs: "30px", md: "0 50px" },
-    textAlign: { xs: "center", md: "right" },
-    direction: "rtl",
     width: { xs: "100%", md: "40%", lg: "45%" },
   },
 
@@ -41,6 +40,7 @@ const SectionThreeStyles = {
   button: {
     mt: 2,
     backgroundColor: "#1F1F1F",
+    textTransform:"none",
     color: "#fff",
     "&:hover": {
       backgroundColor: "#333",
@@ -58,7 +58,7 @@ const SectionThreeStyles = {
     width: "90%",
     maxWidth: "100%",
     height: "100%",
-    objectFit: "cover",
+    objectFit: "fill",
   },
 };
 export default SectionThreeStyles;

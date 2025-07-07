@@ -1,7 +1,6 @@
 
 export const containerStyle = {
   width: "100%",
-  direction: "rtl",
   p: 2,
 };
 

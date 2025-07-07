@@ -27,7 +27,10 @@ import {
   filterButtonStyle,
 } from "./styles/PropertiesFiltersStyle";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { ModalFilter } from "./ModalFilter";
 export default function PropertiesFilters() {
+  const { t } = useTranslation();
   const MotionBox = motion(Box);
   const [tabValue, setTabValue] = useState(0);
   const [searchWord, setSearchWord] = useState("");
@@ -37,8 +40,28 @@ export default function PropertiesFilters() {
     setTabValue(newValue);
   };
 
+
+
+
+
+
+
+
+
+
+
+    const [open, setOpen] = useState(false);
+
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
+
+
   return (
     <Box sx={containerStyle}>
+    <ModalFilter open={open} setOpen={setOpen} handleOpen={handleOpen} handleClose={handleClose}/>
       <Box sx={tabsWrapperStyle}>
         <Tabs
           value={tabValue}
@@ -48,15 +71,15 @@ export default function PropertiesFilters() {
           TabIndicatorProps={{ style: { display: "none" } }}
           sx={tabsStyle}
         >
-          <Tab label="للإيجار" />
-          <Tab label="للبيع" />
-          <Tab label="الكل" />
+          <Tab label={t("propertiesFilters.tabs.rent")} />
+          <Tab label={t("propertiesFilters.tabs.sale")} />
+          <Tab label={t("propertiesFilters.tabs.all")} />
         </Tabs>
       </Box>
 
       <Box sx={filterBoxStyle}>
         <TextField
-          placeholder="ادخل كلمة البحث"
+          placeholder={t("propertiesFilters.searchPlaceholder")}
           value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
           sx={searchFieldStyle}
@@ -70,22 +93,27 @@ export default function PropertiesFilters() {
             onChange={(e) => setType(e.target.value)}
             displayEmpty
           >
-            <MenuItem value="">كل الأنواع</MenuItem>
-            <MenuItem value="شقة">شقة</MenuItem>
-            <MenuItem value="فيلا">فيلا</MenuItem>
+            <MenuItem value="">{t("propertiesFilters.types.all")}</MenuItem>
+            <MenuItem value="شقة">
+              {t("propertiesFilters.types.apartment")}
+            </MenuItem>
+            <MenuItem value="فيلا">
+              {t("propertiesFilters.types.villa")}
+            </MenuItem>
           </Select>
         </FormControl>
 
         <Button variant="contained" sx={searchButtonStyle}>
-          بحث
+          {t("propertiesFilters.buttons.search")}
         </Button>
 
         <Button
           variant="outlined"
           startIcon={<FilterAltOutlinedIcon />}
           sx={filterButtonStyle}
+          onClick={handleOpen}
         >
-          فلترة
+          {t("propertiesFilters.buttons.filter")}
         </Button>
       </Box>
 

@@ -10,11 +10,11 @@ import works2 from "../assets/images/works2.jpg";
 import works1 from "../assets/images/works1.jpg";
 
 export const pagesHeader = [
-  { name: "الرئيسية", path: "/" },
-  { name: "من نحن", path: "/about" },
-  { name: "خدماتنا", path: "/services" },
-  { name: "أعمالنا", path: "/projects" },
-  { name: "عقاراتنا", path: "/properties" },
+  { nameKey: "NavbarMain", path: "/" },
+  { nameKey: "NavbarAboutUs", path: "/about" },
+  { nameKey: "NavbarServices", path: "/services" },
+  { nameKey: "NavbarOurWork", path: "/projects" },
+  { nameKey: "NavbarProperties", path: "/properties" },
 ];
 
 export const Slides = [
@@ -38,18 +38,18 @@ export const Slides = [
 export const servicesData = [
   {
     image: serviceImage,
-    title: "البيع والشراء",
-    description: "احتفل بتغير الفصول مع خدمات الديكور الخارجي الموسمية لدينا",
+    titleKey: "OurServicesSalePurchaseTitle",
+    descriptionKey: "OurServicesSalePurchaseDesc",
   },
   {
     image: serviceImage,
-    title: "التصميم الداخلي",
-    description: "نحو مساحات تعكس شخصيتك وتناسب ذوقك بأناقة واحترافية",
+    titleKey: "OurServicesInteriorSupervisionTitle",
+    descriptionKey: "OurServicesInteriorSupervisionDesc",
   },
   {
     image: serviceImage2,
-    title: "التجديد والترميم",
-    description: "نقدم حلول ترميم حديثة للحفاظ على جمالية وسلامة المكان",
+    titleKey: "OurServicesLandscapeTitle",
+    descriptionKey: "OurServicesLandscapeDesc",
   },
 ];
 
@@ -130,17 +130,16 @@ export const teamMembers = [
 
 export const images = [
   { src: works1, alt: "Image 1" },
-  { src: works3, alt: "Image 2" }, 
+  { src: works3, alt: "Image 2" },
   { src: works2, alt: "Image 3" },
   { src: works1, alt: "Image 4" },
 ];
 
-
 export const categories = [
-  "كل الأعمال",
-  "حمامات",
-  "مطابخ",
-  "مكاتب",
-  "أقسام",
-  "غرف معيشة",
+  { nameKey: "all" },
+  { nameKey: "bathrooms" },
+  { nameKey: "kitchens" },
+  { nameKey: "offices" },
+  { nameKey: "partitions" },
+  { nameKey: "livingRooms" },
 ];

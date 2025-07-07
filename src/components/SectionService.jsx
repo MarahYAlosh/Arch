@@ -1,12 +1,19 @@
 import React from "react";
 import styles from "./styles/SectionThreeStyle";
+import i18n from "../../i18n.js";
 import { motion } from "framer-motion";
 import { Box, Button, Grid, Typography } from "@mui/material";
-export const SectionService = ({ title, text, img, direction }) => {
+import { useTranslation } from "react-i18next";
+export const SectionService = ({ title, text, img, reverse }) => {
+  const { t } = useTranslation();
   return (
-    <Box sx={{ direction: direction }}>
+    <Box>
       <Box sx={styles.root}>
-        <Grid container sx={styles.gridContainer}>
+        <Grid
+          container
+          sx={styles.gridContainer}
+          direction={reverse ? "row-reverse" : "row"}
+        >
           <Grid
             item
             xs={12}
@@ -22,12 +29,19 @@ export const SectionService = ({ title, text, img, direction }) => {
               {title}
             </Typography>
 
-            <Typography variant="body1" paragraph sx={styles.paragraph}>
+            <Typography
+              variant="body1"
+              paragraph
+              sx={{
+                ...styles.paragraph,
+                textAlign: i18n.language === "ar" ? "right" : "left",
+              }}
+            >
               {text}
             </Typography>
 
             <Button variant="contained" size="large" sx={styles.button}>
-              اطلب الخدمة
+              {t("RequestService")}
             </Button>
           </Grid>
 

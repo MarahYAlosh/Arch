@@ -33,7 +33,6 @@ const styles = {
   },
   description: {
     fontSize: 12,
-    direction: "rtl",
   },
 };
 

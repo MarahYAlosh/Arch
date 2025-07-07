@@ -10,19 +10,21 @@ import {
 import { Box, Typography } from "@mui/material";
 import PropertiesFilters from "../components/PropertiesFilters";
 import { Header } from "../components/Header";
+import { useTranslation } from "react-i18next";
 
 export const Properties = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Header />
-      <MainHeader text=" عقاراتنا" />
+      <MainHeader text={t("NavbarProperties")} />
       <Box sx={containerStyle}>
         <Box sx={titleWrapperStyle}>
           <Box sx={titleBoxStyle}>
             <Typography variant="h4" gutterBottom sx={titleStyle}>
-              عقاراتنا
+              {t("realEstate.title")}
             </Typography>
-
             <Box sx={underlineStyle} />
           </Box>
           <Typography
@@ -33,9 +35,7 @@ export const Properties = () => {
               width: { xs: "90%", sm: "68%", md: "52%" },
             }}
           >
-            استكشف مجموعة متنوعة من العقارات المميزة التي تناسب جميع احتياجاتك،
-            حيث نقدم لك خيارات متنوعة من الشقق والمنازل، مع تقديم تفاصيل دقيقة
-            وصور توضيحية لمساعدتك في اتخاذ القرار المثالي
+            {t("realEstate.description")}
           </Typography>
         </Box>
         <PropertiesFilters />

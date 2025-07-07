@@ -15,19 +15,22 @@ import { ProjectCard } from "../components/ProjectCard";
 import { motion } from "framer-motion";
 import { WorkFilter } from "../components/WorkFilter";
 import { Header } from "../components/Header";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Works = () => {
   const MotionBox = motion(Box);
+  const { t } = useTranslation();
 
   return (
     <>
       <Header />
-      <MainHeader text=" أعمالنا" />
+      <MainHeader text={t("NavbarOurWork")} />
       <Box sx={containerStyle}>
         <Box sx={titleWrapperStyle}>
           <Box sx={titleBoxStyle}>
             <Typography variant="h4" gutterBottom sx={titleStyle}>
-              أعمالنا
+              {t("NavbarOurWork")}
             </Typography>
 
             <Box sx={underlineStyle} />
@@ -40,10 +43,7 @@ export const Works = () => {
               width: { xs: "90%", sm: "68%", md: "52%" },
             }}
           >
-            نقدم لكم مجموعة متنوعة من أعمال التصميم الداخلي المبتكرة التي نفذتها
-            شركتنا، حيث تعكس كل منها التزامنا بالجودة والاحترافية، وتظهر تفانينا
-            في تلبية احتياجات عملائنا وتطلعاتهم من خلال تصميمات فريدة تجمع بين
-            الجمال والوظيفة.
+            {t("ourWorksText")}
           </Typography>
         </Box>
         <WorkFilter />
@@ -62,7 +62,12 @@ export const Works = () => {
               }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              <ProjectCard project={project} />
+              <Link
+                to={`/projects/detail`}
+                style={{ textDecoration: "none", width: "100%" }}
+              >
+                <ProjectCard project={project} />
+              </Link>
             </MotionBox>
           ))}
           {projects.map((project, index) => (
@@ -78,7 +83,12 @@ export const Works = () => {
               }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              <ProjectCard project={project} />
+              <Link
+                to={`/projects/detail`}
+                style={{ textDecoration: "none", width: "100%" }}
+              >
+                <ProjectCard project={project} />
+              </Link>
             </MotionBox>
           ))}
         </Box>

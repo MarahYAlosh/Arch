@@ -24,15 +24,17 @@ import {
   underlineStyle,
 } from "./styles/SectionTwoStyle";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export const SectionTwo = () => {
   const MotionBox = motion(Box);
+  const { t } = useTranslation();
   return (
     <Box sx={containerStyle}>
       <Box sx={titleWrapperStyle}>
         <Box sx={titleBoxStyle}>
           <Typography variant="h4" gutterBottom sx={titleStyle}>
-            خدماتنا
+            {t("OurServices")}
           </Typography>
           <Box sx={underlineStyle} />
         </Box>
@@ -50,7 +52,9 @@ export const SectionTwo = () => {
           >
             <Box>
               <Box sx={serviceHeaderStyle}>
-                <Typography sx={serviceTitleStyle}>{service.title}</Typography>
+                <Typography sx={serviceTitleStyle}>
+                  {t(service.titleKey)}
+                </Typography>
                 <Avatar
                   src={service.image}
                   variant="rounded"
@@ -58,7 +62,7 @@ export const SectionTwo = () => {
                 />
               </Box>
               <Typography variant="body2" sx={serviceDescriptionStyle}>
-                {service.description}
+                {t(service.descriptionKey)}
               </Typography>
             </Box>
           </MotionBox>

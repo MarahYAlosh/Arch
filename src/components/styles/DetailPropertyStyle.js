@@ -1,7 +1,7 @@
 
 export const propertyStyles = {
   gridContainer: {
-    direction: "rtl",
+
     flexGrow: 1,
     px: { xs: 2, md: 10 },
     py: 4,

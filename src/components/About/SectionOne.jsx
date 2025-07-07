@@ -5,7 +5,9 @@ import { Box, Grid, Typography } from "@mui/material";
 import pic from "../../assets/images/about.jpg";
 import pic2 from "../../assets/images/about2.jpg";
 import SectionThreeStyles from "../styles/SectionThreeStyle";
+import { useTranslation } from "react-i18next";
 export const SectionOne = () => {
+  const { t } = useTranslation();
   return (
     <Box sx={SectionThreeStyles.root}>
       <Grid container sx={SectionThreeStyles.gridContainer}>
@@ -65,7 +67,7 @@ export const SectionOne = () => {
           sx={SectionThreeStyles.textSection}
         >
           <Typography variant="h4" gutterBottom sx={SectionThreeStyles.heading}>
-            صمم حلمك في ثلاث خطوات بسيطة
+            {t("SectionThreeAbout.heading")}
           </Typography>
 
           <Typography
@@ -73,10 +75,7 @@ export const SectionOne = () => {
             paragraph
             sx={SectionThreeStyles.paragraph}
           >
-            نحن فريق من المهندسين المعماريين المبدعين والمتحمسين، نسعى جاهدين
-            لتحقيق أحلام عملائنا من خلال تصميمات فريدة ومبتكرة. يجمع فريقنا بين
-            الخبرة الواسعة والمعرفة العميقة بأحدث اتجاهات العمارة، مما يمكننا من
-            تقديم حلول تصميم متكاملة تلبي احتياجات كل مشروع
+            {t("SectionThreeAbout.paragraph1")}
           </Typography>
 
           <Typography
@@ -84,9 +83,7 @@ export const SectionOne = () => {
             paragraph
             sx={SectionThreeStyles.paragraph}
           >
-            نؤمن بأن العمارة ليست مجرد بناء، بل هي تعبير عن الفن والوظيفة. نسعى
-            لإنشاء مساحات تعكس هوية عملائنا وتلبي تطلعاتهم، مع التركيز على
-            الجمال والراحة
+            {t("SectionThreeAbout.paragraph2")}
           </Typography>
 
           <Typography
@@ -94,10 +91,7 @@ export const SectionOne = () => {
             paragraph
             sx={SectionThreeStyles.paragraph}
           >
-            نحن نؤمن بالابتكار، الجودة، والتعاون. نعمل جنبًا إلى جنب مع عملائنا
-            لضمان تحقيق رؤيتهم، ونسعى دائماً لتقديم أفضل الحلول المعمارية. إذا
-            كنت تبحث عن شريك موثوق لتحقيق حلمك المعماري، فلا تتردد في الاتصال
-            بنا
+            {t("SectionThreeAbout.paragraph3")}
           </Typography>
 
           <Typography
@@ -105,8 +99,7 @@ export const SectionOne = () => {
             paragraph
             sx={SectionThreeStyles.paragraph}
           >
-            تسعى العمارة الحديثة إلى تحقيق الاستدامة من خلال استخدام تقنيات
-            صديقة للبيئة وتوفير الطاقة، مما يقلل من التأثير السلبي على البيئة
+            {t("SectionThreeAbout.paragraph4")}
           </Typography>
 
           <Typography
@@ -114,8 +107,7 @@ export const SectionOne = () => {
             paragraph
             sx={SectionThreeStyles.paragraph}
           >
-            تسعى العمارة الحديثة إلى تحقيق الاستدامة من خلال استخدام تقنيات
-            صديقة للبيئة وتوفير الطاقة، مما يقلل من التأثير السلبي على البيئة
+            {t("SectionThreeAbout.paragraph5")}
           </Typography>
         </Grid>
       </Grid>

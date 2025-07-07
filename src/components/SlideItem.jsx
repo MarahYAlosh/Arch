@@ -5,8 +5,10 @@ import {
   slideButtonStyle,
 } from "./styles/SlideStyle.js";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const SlideItem = ({ image, title, subtitle, height }) => {
+  const { t} = useTranslation();
   return (
     <Box className="slide-content" sx={slideContentStyle(image, height)}>
       <Box sx={slideInnerContentStyle}>
@@ -19,7 +21,7 @@ export const SlideItem = ({ image, title, subtitle, height }) => {
 
         <Link to={`/contact`} style={{ textDecoration: "none" }}>
           <Button variant="contained" size="large" sx={slideButtonStyle}>
-            ابدأ مشروعك
+              {t("StartProjectButton")}
           </Button>
         </Link>
       </Box>
